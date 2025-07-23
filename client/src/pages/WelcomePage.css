@@ -1,0 +1,179 @@
+
+
+.welcome-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;       
+  height: 100vh;      
+  object-fit: cover;  
+  z-index: 0;
+}
+
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6); 
+  z-index: 1;
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  max-width: 800px;
+}
+
+.fade-in {
+  animation: fadeInUp 1s ease-in-out both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.welcome-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.welcome-buttons a {
+  text-decoration: none;
+  background-color: white;
+  color: #6b21a8;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.welcome-buttons a:hover {
+  background-color: #eee;
+  transform: scale(1.05);
+}
+
+/* Popular section */
+.popular-section {
+  margin-top: 3rem;
+}
+
+.popular-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.popular-movies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.movie-card {
+  width: 120px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.movie-card p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .welcome-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .welcome-buttons a {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .movie-card {
+    width: 100px;
+  }
+
+  .movie-card img {
+    height: 140px;
+  }
+}
+
+.btn {
+  padding: 0.75rem 1.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+
+.login-btn {
+  background-color: #6b21a8;
+  color: white;
+}
+
+.login-btn:hover {
+  background-color: #581c87;
+  transform: translateY(-2px);
+}
+.register-btn {
+  background-color: white;
+  color: #6b21a8;
+  border: 2px solid #6b21a8;
+}
+
+.register-btn:hover {
+  background-color: #f3e8ff;
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 600px) {
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}

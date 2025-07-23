@@ -1,0 +1,131 @@
+.seat-booking-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.movie-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.movie-meta {
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.showtime {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.movie-poster {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.select-seats-title {
+  font-size: 20px;
+  margin: 20px 0 12px;
+}
+
+.seat-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.seat {
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.seat.available {
+  background-color: #22c55e; /* Green */
+}
+
+.seat.available:hover {
+  background-color: #16a34a;
+}
+
+.seat.selected {
+  background-color: #facc15; /* Yellow */
+  color: #000;
+}
+
+.seat.booked {
+  background-color: #ef4444; /* Red */
+  cursor: not-allowed;
+}
+
+.seat-status-key {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.seat-status-key span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.seat-box {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.seat-box.available {
+  background-color: #22c55e;
+}
+.seat-box.selected {
+  background-color: #facc15;
+}
+.seat-box.booked {
+  background-color: #ef4444;
+}
+
+.pay-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pay-button:hover {
+  background-color: #1d4ed8;
+}
+
+.pay-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #dc2626;
+  margin-top: 16px;
+  font-weight: 500;
+}

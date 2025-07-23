@@ -1,0 +1,87 @@
+.homepage-container {
+  padding: 16px;
+  background-color: #f9fafb;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: center;
+  color: #1f2937;
+}
+
+.movie-scroll-row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  padding-left: 4px;
+}
+
+.movie-scroll-row::-webkit-scrollbar {
+  height: 8px;
+}
+.movie-scroll-row::-webkit-scrollbar-track {
+  background: transparent;
+}
+.movie-scroll-row::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 10px;
+}
+
+
+.homepage-wrapper {
+  min-height: 100vh;
+  padding: 24px;
+  background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/10279.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+
+.homepage-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4); 
+  z-index: 0;
+}
+
+
+.homepage-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+
+.page-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+.movie-scroll-row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.movie-scroll-row::-webkit-scrollbar {
+  height: 8px;
+}
+.movie-scroll-row::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
