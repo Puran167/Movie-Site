@@ -7,7 +7,7 @@ const HomePage = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/movies")
+    axios.get("https://movie-site-j4c7.onrender.com")
       .then(res => setMovies(res.data))
       .catch(err => console.error(err));
   }, []);
