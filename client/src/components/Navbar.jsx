@@ -1,24 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
-  return (
-    <nav className="navbar">
-      <div className="navbar-container">
-        <Link to="/" className="navbar-logo">🎬 Movie Zone</Link>
+  const [menuOpen, setMenuOpen] = useState(false);
 
-        <div className="navbar-links">
-          <Link to="/movies" className="nav-link">Movies</Link>
-          <Link to="/dashboard" className="nav-link">Dashboard</Link>
-          <button className="nav-button" onClick={() => {
-            localStorage.clear();
-            window.location.href = "/login";
-          }}>Logout</button>
-        </div>
-      </div>
-    </nav>
-  );
+  const handleLogout = () => {
+    localStorage.clear();
+    window.location.href = "/login";
+  };
+
+  return (
+    <nav className="navbar">
+      <div className="navbar-container">
+        <Link to="/" className="navbar-logo">🎬 Movie Zone</Link>
+
+        <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+          ☰
+        </button>
+
+        <div className={`navbar-links ${menuOpen ? "show" : ""}`}>
+          <Link to="/movies" className="nav-link" onClick={() => setMenuOpen(false)}>Movies</Link>
+          <Link to="/dashboard" className="nav-link" onClick={() => setMenuOpen(false)}>Dashboard</Link>
+          <button className="nav-button" onClick={handleLogout}>Logout</button>
+        </div>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;
